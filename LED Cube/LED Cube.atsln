@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "LED Cube", "LED Cube\LED Cube.cppproj", "{D5183E92-657D-489E-BAFC-29541424E07C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5183E92-657D-489E-BAFC-29541424E07C}.Debug|AVR.ActiveCfg = Debug|AVR
+		{D5183E92-657D-489E-BAFC-29541424E07C}.Debug|AVR.Build.0 = Debug|AVR
+		{D5183E92-657D-489E-BAFC-29541424E07C}.Release|AVR.ActiveCfg = Release|AVR
+		{D5183E92-657D-489E-BAFC-29541424E07C}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
