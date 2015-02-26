@@ -9,7 +9,7 @@
 #define _MAX7219_h
 
 #if defined(ARDUINO) && ARDUINO >= 100
-	#include "Arduino.h"
+//	#include "Arduino.h"
 #else
 	#include "WProgram.h"
 #endif
@@ -17,6 +17,7 @@
 class MAX7219
 {
  private:
+	int e = 0;           // just a variable
 	byte max7219_reg_noop        = 0x00;
 	byte max7219_reg_digit0      = 0x01;
 	byte max7219_reg_digit1      = 0x02;
@@ -36,9 +37,12 @@ class MAX7219
 	void setup();
 	void loop();
 	void putByte();
+	void maxOne();
+	void maxSingle();
+	void maxAll();
 };
 
-extern MAX7219 cube;
+extern MAX7219 MAX;
 
 #endif
 

@@ -16,20 +16,50 @@
  * Pin 4 and 9 go to ground
  * 
  */
-#include "MyClass.h"
+#include "MAX7219.h"
+//***Arduino Pin Configurations***
 
-#define SERIAL=2	//Define the SERIAL data output line on the Arduino
-#define CLOCK=3		//Define the CLOCK line on the Arduino
-#define LOAD=4      //Define the LOAD line on the Arduino
+int SERIAL=2	//Define the SERIAL data output line on the Arduino
+int CLOCK=3		//Define the CLOCK line on the Arduino
+int LOAD=4      //Define the LOAD line on the Arduino
 
 int numberChips = 8 //Set Number of MAX7219 Drivers
 
 void setup()
 {
-	cube.putByte();
+	MAX.setup()
 }
 
 void loop()
 {
-	cube.loop();
+	//if you use more than one MAX7219, it should look like this
+ 
+  /*
+  maxAll(1,1);                       //  + - - - - - - -
+  maxAll(2,3);                       //  + + - - - - - -
+  maxAll(3,7);                       //  + + + - - - - -
+  maxAll(4,15);                      //  + + + + - - - -
+  maxAll(5,31);                      //  + + + + + - - -
+  maxAll(6,63);                      //  + + + + + + - -
+  maxAll(7,127);                     //  + + + + + + + -
+  maxAll(8,255);                     //  + + + + + + + +
+  */
+ 
+  //
+ 
+  //if you use more then one max7219 the second one should look like this
+ 
+ 
+  MAX.maxOne(2,1,1);                       //  + - - - - - - -
+  MAX.maxOne(2,2,2);                       //  - + - - - - - -
+  MAX.maxOne(2,3,4);                       //  - - + - - - - -
+  MAX.maxOne(2,4,8);                       //  - - - + - - - -
+  MAX.maxOne(2,5,16);                      //  - - - - + - - -
+  MAX.maxOne(2,6,32);                      //  - - - - - + - -
+  MAX.maxOne(2,7,64);                      //  - - - - - - + -
+  MAX.maxOne(2,8,128);                     //  - - - - - - - +
+ 
+ 
+  //
+  delay(2000);
 }
